@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import img from "../assets/images/peana.svg";
-import star from "../assets/images/text.png";
+import star from "../assets/images/t.png";
 import logo from "../assets/logo.svg";
 import { NavLink } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
