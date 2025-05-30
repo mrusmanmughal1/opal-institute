@@ -6,8 +6,9 @@ import valid from "../assets/images/buypte/valid.png";
 import ptevoucher from "../assets/images/buypte/ptevoucher.png";
 
 const ButPtevoucher = () => {
+  // .c
   return (
-    <div className="w-[80%] poppins mx-auto py-14">
+    <div className="w-[80%] poppins usman mx-auto py-14">
       <p className="text-center mb-2 text-4xl font-semibold">
         Choose from our Deals
       </p>
