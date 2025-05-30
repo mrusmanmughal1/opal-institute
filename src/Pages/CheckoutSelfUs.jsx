@@ -4,6 +4,7 @@ import img from "../assets/logo-2.png";
 import CheckOutBankTransfer from "../Components/CheckOutBankTransfer";
 import CheckoutcardDetails from "../Components/CheckoutcardDetails";
 import Otp from "../Components/Otp";
+import BookExamWithUs from "../Components/BookExamWithUs";
 
 const CheckoutSelfUs = () => {
   const [selectedPayment, setSelectedPayment] = useState("us");
@@ -14,7 +15,7 @@ const CheckoutSelfUs = () => {
         <div className=" py-10">
           <p className="text-2xl font-semibold">Check Out</p>
           <div className="flex items-center text-gray-700 text-xs gap-1">
-            <p>Vouchers</p> <IoIosArrowForward /> <p>Checkout</p>
+            <p>Buy PTE Voucher</p> <IoIosArrowForward /> <p>Checkout</p>
           </div>
         </div>
         <div className=" mb-10">
@@ -154,7 +155,11 @@ const CheckoutSelfUs = () => {
             </div>
           </div>
         )}
-        {selectedPayment == "us" && <CheckOutBankTransfer />}
+        {selectedPayment == "us" && (
+          <div className="">
+            <CheckOutBankTransfer />
+          </div>
+        )}
       </div>
     </div>
   );

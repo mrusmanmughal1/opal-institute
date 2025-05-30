@@ -5,8 +5,12 @@ import logo from "../assets/logo.svg";
 import { NavLink } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
+import { IoIosArrowDown } from "react-icons/io";
+
 const Header = () => {
   const [nav, setnav] = useState(false);
+  const [showDropdown, setShowDropdown] = useState(false);
+
   return (
     <div className=" ">
       <div className="py-2  flex w-full items-center justify-center text-white bg-primary">
@@ -22,30 +26,66 @@ const Header = () => {
       {/* ----------- navbar   ---------- */}
       <div className="shadow hidden md:block">
         <div className="flex align-center justify-between w-[90%] mx-auto p-4">
-          <div className="flex items-center gap-10">
+          <div className="flex items-center gap-6">
             {" "}
             <img src={logo} alt="" />
             <nav>
               <ul className="flex items-center   be-vietnam">
                 <li>
-                  <NavLink className="p-4 px-6" to="/">
+                  <NavLink className="p-4 px-5" to="/">
                     Home
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="p-4 px-6" to="/book-exam">
+                  <NavLink className="p-4 px-5" to="/book-exam">
                     Book PTE Exam
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="p-4 px-6" to="/buy-voucher">
+                  <NavLink className="p-4 px-5" to="/buy-voucher">
                     Buy IT Vouchers
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="p-4 px-6" to="/practice-mock-test">
+                  <NavLink className="p-4 px-5" to="/practice-mock-test">
                     Scored Practice Mock Test
                   </NavLink>
+                </li>
+                <li
+                  className="p-4 px-5 flex items-center gap-2 relative"
+                  onMouseEnter={() => setShowDropdown(true)}
+                  onMouseLeave={() => setShowDropdown(false)}
+                >
+                  More
+                  <IoIosArrowDown />
+                  {showDropdown && (
+                    <div className="absolute top-full left-0 bg-white shadow-lg rounded-md py-2 min-w-[200px] z-50">
+                      <NavLink
+                        to="/about"
+                        className="block px-4 py-2 hover:bg-gray-100"
+                      >
+                        About Us
+                      </NavLink>
+                      <NavLink
+                        to="/contact"
+                        className="block px-4 py-2 hover:bg-gray-100"
+                      >
+                        Contact
+                      </NavLink>
+                      <NavLink
+                        to="/faq"
+                        className="block px-4 py-2 hover:bg-gray-100"
+                      >
+                        FAQ
+                      </NavLink>
+                      <NavLink
+                        to="/blog"
+                        className="block px-4 py-2 hover:bg-gray-100"
+                      >
+                        Blog
+                      </NavLink>
+                    </div>
+                  )}
                 </li>
               </ul>
             </nav>

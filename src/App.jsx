@@ -20,11 +20,13 @@ import CheckoutPage from "./Pages/CheckoutPage";
 import CheckoutSelfUs from "./Pages/CheckoutSelfUs";
 import Otp from "./Components/Otp";
 import Successfullpayment from "./Pages/Successfullpayment";
+import WhatsAppFloatButton from "./Components/FloatingWhatsapp";
 const App = () => {
   return (
     <>
       <div className="flex flex-col min-h-screen">
         <Header />
+        <WhatsAppFloatButton />
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />

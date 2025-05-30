@@ -19,7 +19,7 @@ const ButPtevoucher = () => {
           <p className="text-2xl font-semibold">PTE + Alfa PTE</p>
           <p className="text-xs">Order Now & Save Big</p>
           <p className="my-6 text-3xl">Rs. 67,600/-</p>
-          <button className="bg-primary  rounded-full p-4 text-white border-shadowborder border-4">
+          <button className="bg-primary  rounded-full px-4 py-3 text-white border-shadowborder border-4">
             Order Now
           </button>
           <p className="li my-10">Save Rs. 17,300/-</p>
@@ -48,13 +48,13 @@ const ButPtevoucher = () => {
           </div>
         </div>
         <div className="bg-white shadow-md z-10 rounded-3xl p-10">
-          <p className="text-2xl font-semibold">PTE + Alfa PTE</p>
+          <p className="text-2xl font-semibold">PTE + SPMT</p>
           <p className="text-xs">Order Now & Save Big</p>
-          <p className="my-6 text-3xl">Rs. 67,600/-</p>
-          <button className="bg-primary  rounded-full p-4 text-white border-shadowborder border-4">
+          <p className="my-6 text-3xl">Rs. 68,600/-</p>
+          <button className="bg-primary  rounded-full px-4 py-3 text-white border-shadowborder border-4">
             Order Now
           </button>
-          <p className="li my-10">Save Rs. 17,300/-</p>
+          <p className="li my-10">Save Rs. 14,100/-</p>
           <div className="py-8 border-t border-[#D1D1F7]">
             <p>Key Features</p>
             <ul className="text-xs  mt-2">
@@ -70,7 +70,7 @@ const ButPtevoucher = () => {
                 <span>
                   <FaCheck />{" "}
                 </span>
-                Alfa PTE Practice Portal (60 days validity){" "}
+                Pearson Scored Practice Mock Test Voucher{" "}
               </li>
             </ul>
           </div>
@@ -83,7 +83,7 @@ const ButPtevoucher = () => {
           <p className="text-2xl font-semibold">PTE + Alfa PTE</p>
           <p className="text-xs">Order Now & Save Big</p>
           <p className="my-6 text-3xl">Rs. 67,600/-</p>
-          <button className="bg-primary  rounded-full p-4 text-white border-shadowborder border-4">
+          <button className="bg-primary  rounded-full px-4 py-3 text-white border-shadowborder border-4">
             Order Now
           </button>
           <p className="li my-10">Save Rs. 17,300/-</p>
@@ -117,7 +117,7 @@ const ButPtevoucher = () => {
           <p className="text-2xl font-semibold">PTE + Alfa PTE</p>
           <p className="text-xs">Order Now & Save Big</p>
           <p className="my-6 text-3xl">Rs. 67,600/-</p>
-          <button className="bg-primary  rounded-full p-4 text-white border-shadowborder border-4">
+          <button className="bg-primary  rounded-full px-4 py-3 text-white border-shadowborder border-4">
             Order Now
           </button>
           <p className="li my-10">Save Rs. 17,300/-</p>
@@ -149,7 +149,7 @@ const ButPtevoucher = () => {
           <p className="text-2xl font-semibold">PTE + Alfa PTE</p>
           <p className="text-xs">Order Now & Save Big</p>
           <p className="my-6 text-3xl">Rs. 67,600/-</p>
-          <button className="bg-primary  rounded-full p-4 text-white border-shadowborder border-4">
+          <button className="bg-primary  rounded-full px-4 py-3 text-white border-shadowborder border-4">
             Order Now
           </button>
           <p className="li my-10">Save Rs. 17,300/-</p>

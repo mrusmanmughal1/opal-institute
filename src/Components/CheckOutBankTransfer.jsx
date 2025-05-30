@@ -8,6 +8,7 @@ import {
 } from "react-icons/fa";
 import { IoCard } from "react-icons/io5";
 import CheckoutcardDetails from "./CheckoutcardDetails";
+import BookExamWithUs from "./BookExamWithUs";
 
 const CheckOutBankTransfer = () => {
   return (
@@ -137,6 +138,15 @@ const CheckOutBankTransfer = () => {
               Pay Now
             </button>
           </div>
+        </div>
+        <BookExamWithUs />
+        <div className="flex my-4 gap-8">
+          <button className="px-6 py-2 border border-gray-400 text-gray-500 rounded-md">
+            Cancel
+          </button>
+          <button className="bg-primary w-full py-2  text-white rounded-md">
+            Submit
+          </button>
         </div>
       </div>
       <div className="w-full">
