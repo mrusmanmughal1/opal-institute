@@ -47,9 +47,9 @@ const Header = () => {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="p-4 px-5" to="/practice-mock-test">
+                  <a href="#mocktest" className="p-4 px-5">
                     Scored Practice Mock Test
-                  </NavLink>
+                  </a>
                 </li>
                 <li
                   className="p-4 px-5 flex items-center gap-2 relative"
