@@ -1,14 +1,21 @@
-import React from "react";
-import { FaCheck } from "react-icons/fa";
+import React, { useState } from "react";
+import { FaCheck, FaMinus, FaPlus } from "react-icons/fa";
+import s from "../assets/Group 1597881710.png";
 import pic from "../assets/ff.png";
 import one from "../assets/images/buypte/1.png";
+import ape from "../assets/images/buypte/ape.png";
+import alfa from "../assets/images/buypte/alfa.png";
+import smt from "../assets/images/buypte/alfa.png";
+
 import valid from "../assets/images/buypte/valid.png";
 import ptevoucher from "../assets/images/buypte/ptevoucher.png";
 
 const ButPtevoucher = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   // .c
   return (
-    <div className="w-[80%] poppins usman mx-auto py-14">
+    <div className="w-[80%] poppins   mx-auto py-14">
       <p className="text-center mb-2 text-4xl font-semibold">
         Choose from our Deals
       </p>
@@ -17,7 +24,7 @@ const ButPtevoucher = () => {
       </p>
       <div className="grid grid-cols-3   my-10 justify-center items-center">
         <div className="bg-[#EFF2FF] relative left-5 rounded-3xl p-10">
-          <p className="text-2xl font-semibold">PTE + Alfa PTE</p>
+          <p className="text-4xl font-semibold">PTE + Alfa PTE</p>
           <p className="text-xs">Order Now & Save Big</p>
           <p className="my-6 text-3xl">Rs. 67,600/-</p>
           <button className="bg-primary  rounded-full px-4 py-3 text-white border-shadowborder border-4">
@@ -45,13 +52,13 @@ const ButPtevoucher = () => {
           </div>
           <div className="flex gap-2">
             <img src={pic} alt="" />
-            <img src={pic} alt="" />
+            <img src={alfa} alt="" />
           </div>
         </div>
         <div className="bg-white shadow-md z-10 rounded-3xl p-10">
-          <p className="text-2xl font-semibold">PTE + SPMT</p>
+          <p className="text-4xl font-semibold">PTE + SPMT</p>
           <p className="text-xs">Order Now & Save Big</p>
-          <p className="my-6 text-3xl">Rs. 68,600/-</p>
+          <p className="my-6 text-3xl">Rs. 68,900/-</p>
           <button className="bg-primary  rounded-full px-4 py-3 text-white border-shadowborder border-4">
             Order Now
           </button>
@@ -81,13 +88,13 @@ const ButPtevoucher = () => {
           </div>
         </div>
         <div className="bg-[#EFF2FF] right-3 relative rounded-3xl p-10">
-          <p className="text-2xl font-semibold">PTE + Alfa PTE</p>
+          <p className="text-4xl font-semibold">PTE + Alfa PTE</p>
           <p className="text-xs">Order Now & Save Big</p>
-          <p className="my-6 text-3xl">Rs. 67,600/-</p>
+          <p className="my-6 text-3xl">Rs. 68,500/-</p>
           <button className="bg-primary  rounded-full px-4 py-3 text-white border-shadowborder border-4">
             Order Now
           </button>
-          <p className="li my-10">Save Rs. 17,300/-</p>
+          <p className="li my-10">Save Rs. 15,300/-</p>
           <div className="py-8 border-t border-[#D1D1F7]">
             <p>Key Features</p>
             <ul className="text-xs mt-2">
@@ -103,7 +110,15 @@ const ButPtevoucher = () => {
                 <span>
                   <FaCheck />{" "}
                 </span>
-                Alfa PTE Practice Portal (60 days validity){" "}
+                Pearson Scored Practice Mock Test Voucher
+              </li>
+
+              <li className="flex items-center gap-2">
+                {" "}
+                <span>
+                  <FaCheck />{" "}
+                </span>
+                ApeUni Practice Portal (30 days validity)
               </li>
             </ul>
           </div>
@@ -115,9 +130,9 @@ const ButPtevoucher = () => {
       </div>
       <div className="flex  justify-center items-center gap-10">
         <div className="bg-[#EFF2FF] right-3 relative rounded-3xl p-10">
-          <p className="text-2xl font-semibold">PTE + Alfa PTE</p>
+          <p className="text-4xl font-semibold">PTE + SPMT + Alfa PTE</p>
           <p className="text-xs">Order Now & Save Big</p>
-          <p className="my-6 text-3xl">Rs. 67,600/-</p>
+          <p className="my-6 text-3xl">Rs. 69,600/-</p>
           <button className="bg-primary  rounded-full px-4 py-3 text-white border-shadowborder border-4">
             Order Now
           </button>
@@ -138,18 +153,24 @@ const ButPtevoucher = () => {
                   <FaCheck />{" "}
                 </span>
                 Alfa PTE Practice Portal (60 days validity){" "}
+              </li>
+              <li className="flex items-center gap-2">
+                <span>
+                  <FaCheck />{" "}
+                </span>
+                Pearson Scored Practice Mock Test Voucher
               </li>
             </ul>
           </div>
           <div className="flex gap-2">
             <img src={pic} alt="" />
-            <img src={pic} alt="" />
+            <img src={alfa} alt="" />
           </div>
         </div>
         <div className="bg-[#EFF2FF] right-3 relative rounded-3xl p-10">
-          <p className="text-2xl font-semibold">PTE + Alfa PTE</p>
+          <p className="text-4xl font-semibold">PTE + SPMT + APEUni</p>
           <p className="text-xs">Order Now & Save Big</p>
-          <p className="my-6 text-3xl">Rs. 67,600/-</p>
+          <p className="my-6 text-3xl">Rs. 72,800/-</p>
           <button className="bg-primary  rounded-full px-4 py-3 text-white border-shadowborder border-4">
             Order Now
           </button>
@@ -170,6 +191,12 @@ const ButPtevoucher = () => {
                   <FaCheck />{" "}
                 </span>
                 Alfa PTE Practice Portal (60 days validity){" "}
+              </li>
+              <li className="flex items-center gap-2">
+                <span>
+                  <FaCheck />{" "}
+                </span>
+                Pearson Scored Practice Mock Test Voucher
               </li>
             </ul>
           </div>
@@ -187,15 +214,48 @@ const ButPtevoucher = () => {
           We offer Pearson Scored Practice Mock Tests A,B,C,D,E to take your
           exam preparation to a next level
         </p>
-        <div className="flex my-10">
+        <div className="flex w-4/5 mx-auto gap-10 my-20">
           <div className="w-full">
             <p className="text-xl font-semibold mb-4">
               Pearson Scored Practice Mock Test
             </p>
             <p className="text-xl font-semibold text-green-500">$130.20</p>
+            <div className="">
+              <div className="border-b rounded-md   mb-2 overflow-hidden">
+                <div
+                  className="flex justify-between items-center px-4 py-3 cursor-pointer    "
+                  onClick={() => setIsOpen(!isOpen)}
+                >
+                  <span className="font-medium">Practice Mock Test A</span>
+
+                  {isOpen ? (
+                    <span className="rounded-full p-2 text-xs border">
+                      <FaMinus />
+                    </span>
+                  ) : (
+                    <span className="rounded-full p-2 text-xs border">
+                      <FaPlus />
+                    </span>
+                  )}
+                </div>
+
+                {isOpen && (
+                  <div className="px-4 py-3 bg-white text-sm text-gray-700  ">
+                    Using past test content and official scoring algorithms,
+                    pearson scored practice mock tests give you an indication of
+                    how you will perform on test day, helping you to feel calm
+                    and confident.
+                  </div>
+                )}
+              </div>
+            </div>
+            <button className="bg-primary px-4 py-2 rounded-md mt-5 w-full text-white font-semibold">
+              Buy Now
+            </button>
           </div>
+
           <div className="w-full">
-            <img src={pic} alt="" className="w-96 " />
+            <img src={s} alt="" className="w-96 " />
           </div>
         </div>
         <div className="flex gao-10 flex-col md:flex-row">
@@ -230,11 +290,11 @@ const ButPtevoucher = () => {
           </p>
           <div className="my-4">
             <div className="grid  w-[80%] mx-auto gap-20 md:grid-cols-2">
-              <div className="relative">
+              <div className="relative border p-4">
                 <img src={valid} className=" absolute -left-4 -top-8 " alt="" />
                 <img src={ptevoucher} alt="" className="w-96" />
                 <div className="space-y-2 mb-2">
-                  <p className="text-xs text-gray-500">
+                  <p className="text-xs text-gray-500 p-2">
                     practice exam beforehand
                   </p>
                   <p className="text-primary font-semibold">
@@ -247,11 +307,11 @@ const ButPtevoucher = () => {
                 </div>
                 <button className="bg-gray-100 w-full p-2">Buy Now</button>
               </div>
-              <div className="relative">
+              <div className="relative border p-4">
                 <img src={valid} className=" absolute -left-4 -top-8 " alt="" />
                 <img src={ptevoucher} alt="" className="w-96" />
                 <div className="space-y-2 mb-2">
-                  <p className="text-xs text-gray-500">
+                  <p className="text-xs text-gray-500 p-2">
                     practice exam beforehand
                   </p>
                   <p className="text-primary font-semibold">
@@ -264,28 +324,11 @@ const ButPtevoucher = () => {
                 </div>
                 <button className="bg-gray-100 w-full p-2">Buy Now</button>
               </div>
-              <div className="relative">
+              <div className="relative border p-4">
                 <img src={valid} className=" absolute -left-4 -top-8 " alt="" />
                 <img src={ptevoucher} alt="" className="w-96" />
                 <div className="space-y-2 mb-2">
-                  <p className="text-xs text-gray-500">
-                    practice exam beforehand
-                  </p>
-                  <p className="text-primary font-semibold">
-                    Alfa PTE Portal Access 30 Days
-                  </p>
-                  <p className="text-xs">
-                    Unlock your potential with AlfaPTE, the leading practice
-                    platform for PTE Academic / UKVI, and PTE Core preparation.
-                  </p>
-                </div>
-                <button className="bg-gray-100 w-full p-2">Buy Now</button>
-              </div>
-              <div className="relative">
-                <img src={valid} className=" absolute -left-4 -top-8 " alt="" />
-                <img src={ptevoucher} alt="" className="w-96" />
-                <div className="space-y-2 mb-2">
-                  <p className="text-xs text-gray-500">
+                  <p className="text-xs text-gray-500 p-2">
                     practice exam beforehand
                   </p>
                   <p className="text-primary font-semibold">
@@ -313,7 +356,7 @@ const ButPtevoucher = () => {
             <div className="grid  w-[80%] mx-auto gap-20 md:grid-cols-2">
               <div className="relative">
                 <img src={valid} className=" absolute -left-4 -top-8 " alt="" />
-                <img src={ptevoucher} alt="" className="w-96" />
+                <img src={ape} alt="" className="w-96" />
                 <div className="space-y-2 mb-2">
                   <p className="text-xs text-gray-500">
                     practice exam beforehand
@@ -330,7 +373,7 @@ const ButPtevoucher = () => {
               </div>
               <div className="relative">
                 <img src={valid} className=" absolute -left-4 -top-8 " alt="" />
-                <img src={ptevoucher} alt="" className="w-96" />
+                <img src={ape} alt="" className="w-96" />
                 <div className="space-y-2 mb-2">
                   <p className="text-xs text-gray-500">
                     practice exam beforehand
@@ -347,7 +390,7 @@ const ButPtevoucher = () => {
               </div>
               <div className="relative">
                 <img src={valid} className=" absolute -left-4 -top-8 " alt="" />
-                <img src={ptevoucher} alt="" className="w-96" />
+                <img src={ape} alt="" className="w-96" />
                 <div className="space-y-2 mb-2">
                   <p className="text-xs text-gray-500">
                     practice exam beforehand
@@ -364,7 +407,7 @@ const ButPtevoucher = () => {
               </div>
               <div className="relative">
                 <img src={valid} className=" absolute -left-4 -top-8 " alt="" />
-                <img src={ptevoucher} alt="" className="w-96" />
+                <img src={ape} alt="" className="w-96" />
                 <div className="space-y-2 mb-2">
                   <p className="text-xs text-gray-500">
                     practice exam beforehand
