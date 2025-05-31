@@ -93,7 +93,7 @@ const ComptiaVouchers = () => {
                     {val.price}.90
                   </p>
                   <NavLink
-                    to="/"
+                    to="/buy-voucher"
                     className="bg-[#F1F1F3] text-center py-2 px-10 rounded-md font-semibold"
                   >
                     Order Now

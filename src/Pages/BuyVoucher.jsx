@@ -5,9 +5,9 @@ import CollapsRow from "../Components/Collapsrow";
 const BuyVoucher = () => {
   const [isOpen, setIsOpen] = useState(false);
   const data = [
-    { id: 1, title: "Row 1", content: "This is the content for row 1." },
-    { id: 2, title: "Row 2", content: "This is the content for row 2." },
-    { id: 3, title: "Row 3", content: "This is the content for row 3." },
+    { id: 1, title: "VALIDITY", content: "This is the content for row 1." },
+    { id: 2, title: "DELIVERY", content: "This is the content for row 2." },
+    { id: 3, title: "How to Use", content: "This is the content for row 3." },
   ];
   return (
     <div>
