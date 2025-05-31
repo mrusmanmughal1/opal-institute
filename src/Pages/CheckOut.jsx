@@ -3,6 +3,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import img from "../assets/logo-2.png";
 import CheckOutBankTransfer from "../Components/CheckOutBankTransfer";
 import CheckoutcardDetails from "../Components/CheckoutcardDetails";
+import Successfullpayment from "./Successfullpayment";
 
 const CheckOut = () => {
   const [selectedPayment, setSelectedPayment] = useState("card");
@@ -142,7 +143,10 @@ const CheckOut = () => {
                     <button className="px-6 py-2 border border-gray-400 text-gray-500 rounded-md">
                       Cancel
                     </button>
-                    <button className="bg-primary w-full py-2  text-white rounded-md">
+                    <button
+                      onClick={() => setSelectedPayment(2)}
+                      className="bg-primary w-full py-2  text-white rounded-md"
+                    >
                       Pay Now
                     </button>
                   </div>
@@ -154,7 +158,15 @@ const CheckOut = () => {
             </div>
           </div>
         )}
-        {selectedPayment == "bank" && <CheckOutBankTransfer />}
+        {selectedPayment == "bank" && (
+          <CheckOutBankTransfer set={setSelectedPayment} />
+        )}
+        {selectedPayment == 2 && (
+          <Successfullpayment
+            Message={"You’ll receive an email shortly."}
+            orderid={"Your Order ID: 154678912"}
+          />
+        )}
       </div>
     </div>
   );

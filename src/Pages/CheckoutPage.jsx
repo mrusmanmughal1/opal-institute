@@ -9,7 +9,7 @@ const CheckoutPage = () => {
     {
       question: "VALIDITY",
       answer:
-        "You can return any item within 30 days of purchase for a full refund. The item must be unused and in its original packaging.",
+        "PTE Voucher’s Validity only for Pakistan.Pearson Scored Practice Mock Teat is valid Globally.",
     },
     {
       question: "DELIVERY",
@@ -46,7 +46,7 @@ const CheckoutPage = () => {
                 to="/checkout-pte-user"
                 className="bg-primary rounded-full block text-center text-white w-full py-3 p-2"
               >
-                Process to Checkout
+                Proceed to Checkout
               </NavLink>
               <div className=" my-4 text-sm">
                 <ul className="space-y-2">

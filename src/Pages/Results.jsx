@@ -1,6 +1,7 @@
 import logo2 from "../assets/logo-2.png";
 import el from "../assets/images/elements.png";
 import one from "../assets/images/result/1.png";
+import { NavLink } from "react-router-dom";
 
 const Results = () => {
   return (
@@ -96,12 +97,18 @@ const Results = () => {
               </div>
             </div>
             <div className=" flex gap-4 mt-4">
-              <button className="bg-primary text-white rounded-full px-8 py-3">
+              <NavLink
+                to="/buy-pte-voucher"
+                className="bg-primary text-white rounded-full px-8 py-3"
+              >
                 Book Exam{" "}
-              </button>
-              <button className=" rounded-full px-8 py-3 border text-primary">
+              </NavLink>
+              <NavLink
+                to="/contact"
+                className=" rounded-full px-8 py-3 border text-primary"
+              >
                 Contact Us
-              </button>
+              </NavLink>
             </div>
           </div>
           <div className="w-full">
@@ -243,6 +250,11 @@ const Results = () => {
               </button>
             </div>
           </div>
+        </div>
+        <div className="flex justify-center items-center w-full mt-10">
+          <button className="px-6 py-2 bg-primary text-white rounded-md">
+            View More
+          </button>
         </div>
       </div>
     </div>

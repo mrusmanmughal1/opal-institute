@@ -75,13 +75,13 @@ const BookExamWithUs = () => {
           <p className="font-semibold my-2">Test Type</p>
           <div className="flex items-center gap-6">
             <div className="">
-              <input type="radio" name="" id="" /> <span>Academic</span>
+              <input type="radio" name="a" id="" /> <span>Academic</span>
             </div>
             <div className="">
-              <input type="radio" name="" id="" /> <span>UKVI</span>
+              <input type="radio" name="a" id="" /> <span>UKVI</span>
             </div>
             <div className="">
-              <input type="radio" name="" id="" /> <span>Core</span>
+              <input type="radio" name="a" id="" /> <span>Core</span>
             </div>
           </div>
         </div>
@@ -124,6 +124,30 @@ const BookExamWithUs = () => {
             <option value="ITAS">ITAS</option>
           </optgroup>
         </select>
+        <div className="my-2">
+          <input type="date" name="" id="" className="p-2  border w-full" />
+        </div>
+        <div className=" my-2">
+          <input
+            type="text"
+            placeholder="Passport Number"
+            className="p-2  border w-full"
+            name=""
+            id=""
+          />
+        </div>
+        <div className=" my-2">
+          <textarea
+            cols={4}
+            rows={4}
+            type="date"
+            className="p-2  border w-full"
+            name=""
+            placeholder="Add Notes"
+            id=""
+          />
+        </div>
+        <p className="my-4"></p>
       </div>
     </div>
   );

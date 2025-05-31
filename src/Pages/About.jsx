@@ -4,6 +4,8 @@ import ceo from "../assets/images/about/ceo.png";
 import Slider from "react-slick";
 import img1 from "../assets/images/about/slider1.png";
 import CoverflowSlider from "../Components/CoverflowSlider";
+import MediaGallery from "../Components/MediaGallery";
+import Sliders from "../Components/Slider";
 const About = () => {
   var settings = {
     dots: false,
@@ -43,38 +45,40 @@ const About = () => {
   };
   return (
     <div className="  w-full poppins relative">
-      <img src={bg} alt="" className="-z-30  hidden md:block" />
-      <div className="flex flex-col md:flex-row items-end md:absolute top-0 md:ps-20 ">
-        <div className="md:w-3/5 hidden md:block">
-          <p className="be-vietnam text-white text-6xl flex  flex-col font-semibold">
-            <span>WHY </span>OPAL INSTITUTE?
-          </p>
-        </div>
-        <div className="md:w-2/5">
-          <div className="bg-white  relative top-10 z-10  p-10 pb-32 space-y-4">
-            <p className="text-4xl font-semibold">
-              Pearson VUE Authorised Test Center
-            </p>
-            <p className="text-gray-500">
-              Opal Institute is a Pearson VUE Authorised Testing Center which
-              was established in 2021 and only deal PTE. We are a Pearson VUE
-              Authorised Test Center for PVTC, PVTC-SELECT. Opal Institute has
-              been consistently receiving awards in different citites of
-              Pakistan.
+      <div className="relative">
+        <img src={bg} alt="" className="-z-30  w-full hidden md:block" />
+        <div className="flex flex-col md:flex-row items-end md:absolute bottom-0 md:ps-20 ">
+          <div className="md:w-3/5 hidden md:block">
+            <p className="be-vietnam text-white text-6xl flex  mb-20 flex-col font-semibold">
+              <span>WHY </span>OPAL INSTITUTE?
             </p>
           </div>
-          <div className="flex bg-primary z-20 relative text-white p-6 md:w-[80%] md:ms-auto">
-            <div className="text-center border-r border-white">
-              <p className="text-4xl">#1</p>
-              <p className="text-lg">in Punjab Province</p>
+          <div className="md:w-2/5 ">
+            <div className="bg-white  relative top-10 z-10  p-10 pb-32 space-y-4">
+              <p className="text-4xl font-semibold">
+                Pearson VUE Authorised Test Center
+              </p>
+              <p className="text-gray-500">
+                Opal Institute is a Pearson VUE Authorised Testing Center which
+                was established in 2021 and only deal PTE. We are a Pearson VUE
+                Authorised Test Center for PVTC, PVTC-SELECT. Opal Institute has
+                been consistently receiving awards in different citites of
+                Pakistan.
+              </p>
             </div>
-            <div className="text-center border-r border-white">
-              <p className="text-4xl">50K+</p>
-              <p className="text-lg">Students Enrolled</p>
-            </div>
-            <div className="text-center">
-              <p className="text-4xl">#1</p>
-              <p className="text-lg">PTE Platinum Partner</p>
+            <div className="flex bg-primary z-20 relative text-white p-6 md:w-[80%] md:ms-auto">
+              <div className="text-center border-r border-white">
+                <p className="text-4xl">#1</p>
+                <p className="text-lg">in Punjab Province</p>
+              </div>
+              <div className="text-center border-r border-white">
+                <p className="text-4xl">1K+</p>
+                <p className="text-lg">Students Enrolled</p>
+              </div>
+              <div className="text-center">
+                <p className="text-4xl">#1</p>
+                <p className="text-lg">PTE Platinum Partner</p>
+              </div>
             </div>
           </div>
         </div>
@@ -137,26 +141,12 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="">
-        <CoverflowSlider />
+      <div className=" mt-20">
+        <MediaGallery />
       </div>
       <div className="">
         <div className="slider-container about mt-32  w-[80%] mx-auto text-center ">
-          <p className="font-semibold text-4xl mb-10 plus-jakarta  ">
-            CERTIFICATIONS & AWARDS
-          </p>
-
-          <Slider {...settings}>
-            <div className="bg-white p-2 shadow-md">
-              <img src={img1} alt="" />
-            </div>
-            <div className="bg-white p-2 shadow-md">
-              <img src={img1} alt="" />
-            </div>
-            <div className="bg-white p-2 shadow-md">
-              <img src={img1} alt="" />
-            </div>
-          </Slider>
+          <Sliders />
         </div>
       </div>
     </div>

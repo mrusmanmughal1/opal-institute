@@ -1,8 +1,19 @@
 import React from "react";
 import { FaFacebookSquare, FaInstagram, FaTwitter } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
 const MainFooter = () => {
+  const navigate = useNavigate();
+
+  const scrollToMockTest = () => {
+    navigate("/");
+    setTimeout(() => {
+      const element = document.getElementById("mocktest");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 1000);
+  };
   return (
     <div className="  pt-20">
       <div className="w-[90%] md:w-[80%] mx-auto">
@@ -27,70 +38,57 @@ const MainFooter = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {/* Home Column */}
                 <div>
-                  <h3 className="text-lg font-medium mb-4">Home</h3>
+                  <h3 className="text-lg font-medium mb-4">
+                    <NavLink to="/">Home</NavLink>
+                  </h3>
                   <ul className="space-y-2 text-gray-500">
                     <li>
-                      <Link href="/benefits" className="hover:text-gray-700">
-                        Benefits
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/offerings" className="hover:text-gray-700">
-                        Our Offerings
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/testimonials"
+                      <NavLink
+                        to="/buy-pte-voucher"
                         className="hover:text-gray-700"
                       >
-                        Testimonials
-                      </Link>
+                        Buy PTE Vouchers
+                      </NavLink>
                     </li>
                     <li>
-                      <Link href="/faq" className="hover:text-gray-700">
-                        FAQ
-                      </Link>
+                      <NavLink
+                        to="/buy-it-vouchers"
+                        className="hover:text-gray-700"
+                      >
+                        Buy IT Vouchers
+                      </NavLink>
                     </li>
                     <li>
-                      <Link href="/contact" className="hover:text-gray-700">
-                        Contact Us
-                      </Link>
+                      <button onClick={scrollToMockTest} className=" ">
+                        Scored Practice Mock Test
+                      </button>
                     </li>
                   </ul>
                 </div>
 
                 {/* About Us Column */}
                 <div>
-                  <h3 className="text-lg font-medium mb-4">About Us</h3>
+                  <h3 className="text-lg font-medium mb-4">
+                    <NavLink to="/about">About Us</NavLink>
+                  </h3>
                   <ul className="space-y-2 text-gray-500">
                     <li>
-                      <Link href="/ceo" className="hover:text-gray-700">
-                        Our CEO
-                      </Link>
+                      <NavLink to="/results" className="hover:text-gray-700">
+                        Our Results
+                      </NavLink>
                     </li>
                     <li>
-                      <Link
-                        href="/success-stories"
+                      <NavLink to="/contact" className="hover:text-gray-700">
+                        Contact Us
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        to="/testing-services"
                         className="hover:text-gray-700"
                       >
-                        Success Stories
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/vouchers" className="hover:text-gray-700">
-                        Buy Vouchers
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/exams" className="hover:text-gray-700">
-                        Book Exams
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/mock-test" className="hover:text-gray-700">
-                        Practice Mock Test
-                      </Link>
+                        Testing Servies
+                      </NavLink>
                     </li>
                   </ul>
                 </div>

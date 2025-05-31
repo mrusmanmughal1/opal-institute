@@ -2,9 +2,18 @@ import React, { useState } from "react";
 import { FaMinus, FaPlus } from "react-icons/fa";
 
 const data = [
-  { id: 1, title: "Row 1", content: "This is the content for row 1." },
-  { id: 2, title: "Row 2", content: "This is the content for row 2." },
-  { id: 3, title: "Row 3", content: "This is the content for row 3." },
+  {
+    id: 1,
+    title: "VALIDITY",
+    content:
+      "PTE Voucher’s Validity only for Pakistan.Pearson Scored Practice Mock Teat is valid Globally.",
+  },
+  {
+    id: 2,
+    title: "DELIVERY",
+    content: "Typically delivers within 3-4 hours via email.",
+  },
+  { id: 3, title: "How to Use", content: "You Will Get an email with details" },
 ];
 
 const CollapsibleRow = ({ title, content }) => {

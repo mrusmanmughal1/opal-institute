@@ -11,7 +11,7 @@ import CheckoutcardDetails from "./CheckoutcardDetails";
 import BookExamWithUs from "./BookExamWithUs";
 import Successfullpayment from "../Pages/Successfullpayment";
 
-const CheckOutBankTransfer = () => {
+const CheckOutBankTransfer = ({ set }) => {
   const [block, setblock] = useState(1);
   return (
     <div className="flex gap-10">
@@ -143,7 +143,7 @@ const CheckOutBankTransfer = () => {
                 Cancel
               </button>
               <button
-                onClick={() => setblock(2)}
+                onClick={set ? () => set(2) : () => setblock(2)}
                 className="bg-primary w-full py-2  text-white rounded-md"
               >
                 Submit & Continue

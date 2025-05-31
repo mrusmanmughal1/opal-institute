@@ -2,13 +2,12 @@ import React, { useState } from "react";
 import img from "../assets/voc.svg";
 import { FaMinus, FaPlus } from "react-icons/fa";
 import CollapsRow from "../Components/Collapsrow";
+import { GoCheck } from "react-icons/go";
+import { NavLink } from "react-router-dom";
 const BuyVoucher = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const data = [
-    { id: 1, title: "VALIDITY", content: "This is the content for row 1." },
-    { id: 2, title: "DELIVERY", content: "This is the content for row 2." },
-    { id: 3, title: "How to Use", content: "This is the content for row 3." },
-  ];
+  const [count, setcount] = useState(1);
+
   return (
     <div>
       <div className=" flex flex-col md:flex-row w-[90%] md:w-[60%] mx-auto mt-10 gap-10 ">
@@ -39,19 +38,21 @@ const BuyVoucher = () => {
           <div className="flex gap-5 mt-5">
             <div className=" flex items-center gap-5 rounded-3xl px-4 py-3 bg-slate-100">
               <span className="text-xs">
-                <FaMinus />
+                <FaMinus onClick={() => setcount((e) => e - 1)} />
               </span>
-              1
+              {count}
               <span className="text-xs">
-                <FaPlus />
+                <FaPlus onClick={() => setcount((e) => e + 1)} />
               </span>
             </div>
             <div className="bg-primary text-white rounded-3xl w-full text-center py-3">
-              <button>Proceed to Checkout</button>
+              <NavLink to="/check-out">Proceed to Checkout</NavLink>
             </div>
           </div>
           <div className="flex items-center text-xs gap-2 mt-6 poppins font-medium">
-            <input type="checkbox" name="valid-for-pak" id="valid-for-pak" />
+            <span>
+              <GoCheck className="font-bold " />
+            </span>
             <label htmlFor="valid-for-pak ">Validity only for Pakistan</label>
           </div>
           <div className=" mt-6 poppins">

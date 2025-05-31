@@ -30,7 +30,7 @@ const CheckoutSelfUs = () => {
         <div className=" mb-10">
           <div className=" gap-2 text-[10px] font-semibold  flex items-center">
             <div
-              className={`px-4 py-2 border-2 rounded-[5px] cursor-pointer ${
+              className={`p-4  border-2 rounded-[5px] cursor-pointer ${
                 selectedPayment === "self"
                   ? "border-primary"
                   : "border-gray-200"
@@ -50,7 +50,7 @@ const CheckoutSelfUs = () => {
             </div>
 
             <div
-              className={`px-4 py-2 border-2 rounded-[5px] cursor-pointer ${
+              className={`p-4  border-2 rounded-[5px] cursor-pointer ${
                 selectedPayment === "us" ? "border-primary" : "border-gray-200"
               }`}
               onClick={() => setSelectedPayment("us")}

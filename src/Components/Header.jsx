@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import img from "../assets/images/peana.svg";
 import star from "../assets/images/t.png";
 import logo from "../assets/logo.svg";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
 import { IoIosArrowDown } from "react-icons/io";
@@ -10,6 +10,17 @@ import { IoIosArrowDown } from "react-icons/io";
 const Header = () => {
   const [nav, setnav] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
+  const navigate = useNavigate();
+
+  const scrollToMockTest = () => {
+    navigate("/");
+    setTimeout(() => {
+      const element = document.getElementById("mocktest");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 1000);
+  };
 
   return (
     <div className=" ">
@@ -38,7 +49,7 @@ const Header = () => {
                 </li>
                 <li>
                   <NavLink className="p-4 px-5" to="/buy-pte-voucher">
-                    Book PTE Exam
+                    Buy PTE Vouchers
                   </NavLink>
                 </li>
                 <li>
@@ -47,9 +58,9 @@ const Header = () => {
                   </NavLink>
                 </li>
                 <li>
-                  <a href="#mocktest" className="p-4 px-5">
+                  <button onClick={scrollToMockTest} className="p-4 px-5">
                     Scored Practice Mock Test
-                  </a>
+                  </button>
                 </li>
                 <li
                   className="p-4 px-5 flex items-center gap-2 relative"

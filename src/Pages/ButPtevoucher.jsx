@@ -18,8 +18,12 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 const ButPtevoucher = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const phoneNumber = "+923258603436";
+  const message = "hi";
 
-  // .c
+  const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+    message
+  )}`;
   return (
     <div className="w-[80%] poppins   mx-auto py-14">
       <p className="text-center mb-2 text-4xl font-semibold">
@@ -255,7 +259,7 @@ const ButPtevoucher = () => {
                     </option>
                     <option value="">practice mock test A</option>
                     <option value=""> practice mock test B</option>
-                    <option value=""> practice mock test c</option>
+                    <option value=""> practice mock test C</option>
                     <option value=""> practice mock test D</option>
                     <option value=""> practice mock test E</option>
                   </select>
@@ -269,12 +273,12 @@ const ButPtevoucher = () => {
             </div>
             <br />
             <div className="">
-              <NavLink
-                to="/checkout-PTE"
+              <a
+                href={whatsappLink}
                 className="bg-primary   w-full block text-center  rounded-md  px-4 py-2 text-white border-shadowborder border-4"
               >
                 Buy Now
-              </NavLink>
+              </a>
             </div>
           </div>
 
@@ -295,13 +299,14 @@ const ButPtevoucher = () => {
             <p className="text-2xl font-semibold">Rs. 67,000/-</p>
             <div className="">
               <br />
-              <NavLink
+              <a
+                href={whatsappLink}
                 to="/"
                 className="text-white font-semibold bg bg-primary px-16 py-3 rounded-full
               "
               >
                 Buy Now
-              </NavLink>
+              </a>
             </div>
           </div>
           <div className="w-full">
@@ -331,7 +336,9 @@ const ButPtevoucher = () => {
                     platform for PTE Academic / UKVI, and PTE Core preparation.
                   </p>
                 </div>
-                <button className="bg-gray-100 w-full p-2">Buy Now</button>
+                <a href={whatsappLink} className="bg-gray-100 w-full p-2">
+                  Buy Now
+                </a>
               </div>
               <div className="relative border p-4">
                 <img src={tees} className=" absolute -left-4 -top-8 " alt="" />
@@ -348,7 +355,9 @@ const ButPtevoucher = () => {
                     platform for PTE Academic / UKVI, and PTE Core preparation.
                   </p>
                 </div>
-                <button className="bg-gray-100 w-full p-2">Buy Now</button>
+                <a href={whatsappLink} className="bg-gray-100 w-full p-2">
+                  Buy Now
+                </a>
               </div>
               <div className="relative border p-4">
                 <img src={novy} className=" absolute -left-4 -top-8 " alt="" />
@@ -365,7 +374,9 @@ const ButPtevoucher = () => {
                     platform for PTE Academic / UKVI, and PTE Core preparation.
                   </p>
                 </div>
-                <button className="bg-gray-100 w-full p-2">Buy Now</button>
+                <a href={whatsappLink} className="bg-gray-100 w-full p-2">
+                  Buy Now
+                </a>
               </div>
             </div>
           </div>
@@ -395,7 +406,9 @@ const ButPtevoucher = () => {
                     Uni voucher.
                   </p>
                 </div>
-                <button className="bg-gray-100 w-full p-2">Buy Now</button>
+                <a href={whatsappLink} className="bg-gray-100 w-full p-2">
+                  Buy Now
+                </a>
               </div>
 
               <div className="relative border p-4">
@@ -413,7 +426,9 @@ const ButPtevoucher = () => {
                     Uni voucher.
                   </p>
                 </div>
-                <button className="bg-gray-100 w-full p-2">Buy Now</button>
+                <a href={whatsappLink} className="bg-gray-100 w-full p-2">
+                  Buy Now
+                </a>
               </div>
               <div className="relative border p-4">
                 <img src={novy} className=" absolute -left-4 -top-8 " alt="" />
@@ -430,7 +445,9 @@ const ButPtevoucher = () => {
                     Uni voucher.
                   </p>
                 </div>
-                <button className="bg-gray-100 w-full p-2">Buy Now</button>
+                <a href={whatsappLink} className="bg-gray-100 w-full p-2">
+                  Buy Now
+                </a>
               </div>
             </div>
           </div>

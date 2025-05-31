@@ -14,7 +14,7 @@ const WhatsAppFloatButton = ({
       href={whatsappLink}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-4 right-4 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg z-50"
+      className="fixed animate-bounce duration-1000 bottom-4 right-4 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg z-50"
       style={{ transition: "background 0.3s ease" }}
     >
       <svg

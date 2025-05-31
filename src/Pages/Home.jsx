@@ -200,6 +200,14 @@ const Home = () => {
             <div className="">
               <Resultsrow />
             </div>
+            <div className="flex justify-center items-center w-full mt-10">
+              <NavLink
+                to="/results"
+                className="px-6 py-2 bg-primary text-white rounded-md"
+              >
+                View More
+              </NavLink>
+            </div>
           </div>
         </div>
         <div className="w-[90%] md:w-[70%] mx-auto py-10">
