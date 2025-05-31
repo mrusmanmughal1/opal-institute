@@ -1,11 +1,14 @@
 import React from "react";
 import hero from "../assets/images/home/Placeholder.png";
-
 import h1 from "../assets/images/home/h1.png";
-
-import { IoIosCheckmark } from "react-icons/io";
-import { MdOutlineArrowOutward, MdOutlineArrowRightAlt } from "react-icons/md";
+import {
+  IoIosCheckmark,
+  IoMdArrowDropleft,
+  IoMdArrowDropright,
+} from "react-icons/io";
+import { MdOutlineArrowOutward } from "react-icons/md";
 import { NavLink } from "react-router-dom";
+import Slider from "react-slick";
 
 const Hero = () => {
   const data = [
@@ -30,12 +33,59 @@ const Hero = () => {
       link: "/buy-it-vouchers",
     },
   ];
+  var settings = {
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    arrows: true,
+    nextArrow: <IoMdArrowDropright className="text-gray-800 " />,
+    prevArrow: <IoMdArrowDropleft />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <div>
       <div className="w-[90%] md:w-[80%] mx-auto ">
         <div className="flex flex-col md:flex-row be-vietnam  ">
-          <div className="w-full  md:w-[70%]">
-            <img src={hero} alt="" />
+          <div className="w-full  md:w-[70%] hero-slider">
+            <Slider {...settings}>
+              {[hero, hero, hero].map((val, i) => {
+                return (
+                  <div key={i} className="    ">
+                    <img src={val} alt="" className="   w-full  " />
+                  </div>
+                );
+              })}
+            </Slider>
+            {/* <img src={hero} alt="" /> */}
           </div>
           <div className="w-full md:w-[30%] md:pt-20">
             <div

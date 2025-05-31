@@ -74,6 +74,47 @@ body {
   background-repeat: no-repeat;
 }
 
+/* hero slider arrows  */
+
+.hero-slider .slick-prev,
+.hero-slider .slick-next {
+  top: 97% !important;
+  color: white;
+  background-color: #020f41;
+  width: 3rem;
+  height: 3rem;
+}
+.hero-slider .slick-next {
+  right: 86%;
+}
+.hero-slider .slick-prev {
+  left: 15px !important;
+}
+.hero-slider .slick-next .slick-prev {
+  width: 20px !important ;
+  background-color: aquamarine !important;
+}
+.hero-slider .slick-prev:before,
+.slick-next:before {
+  color: white;
+  width: 3rem !important;
+}
+.hero-slider .slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  color: white !important;
+  background-color: #728cf3 !important;
+}
+
+.hero-slider .slick-prev:before,
+.slick-next:before,
+.hero-slider .slick-next::before,
+.slick-next::before {
+  font-size: 3rem;
+  border-radius: 0 !important;
+  background-color: #3686bf;
+}
 /* slider  */
 slick-arrow slick-prev {
   color: black;
