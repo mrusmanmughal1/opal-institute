@@ -1,7 +1,10 @@
 import React from "react";
 import { useEffect, useRef } from "react";
 import Swiper from "swiper";
+import { Navigation } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/navigation";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import img1 from "../assets/images/pictures/Artboard 1.png";
 import img2 from "../assets/images/pictures/Artboard 2.png";
 import img3 from "../assets/images/pictures/Artboard 3.png";
@@ -20,6 +23,7 @@ const MediaGallery = () => {
   const swiperRef = useRef(null);
   useEffect(() => {
     const swiperInstance = new Swiper(swiperRef.current, {
+      modules: [Navigation],
       grabCursor: true,
       watchSlidesProgress: true,
       loop: true,
@@ -27,6 +31,12 @@ const MediaGallery = () => {
       centeredSlides: true,
       spaceBetween: 20,
       initialSlide: 0,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      speed: 800,
+      effect: "slide",
       on: {
         progress(e) {
           const t = e.slides.length;
@@ -65,18 +75,20 @@ const MediaGallery = () => {
     });
 
     return () => {
-      swiperInstance.destroy();
+      if (swiperInstance) {
+        swiperInstance.destroy();
+      }
     };
   }, []);
+
   return (
     <div>
       <div className="text-2xl md:text-4xl poppins my-10 text-center font-semibold">
         MEDIA GALLERY
       </div>
-      <div className="my-10">
+      <div className="my-10 relative">
         <div className="swiper carousel-slider" ref={swiperRef}>
           <div className="swiper-wrapper">
-            {/* Add your slides below */}
             {[
               img1,
               img2,
@@ -94,11 +106,23 @@ const MediaGallery = () => {
             ].map((_, index) => (
               <div key={index} className="swiper-slide">
                 <div className="item-content shadow-lg rounded-xl overflow-hidden">
-                  <img src={_} alt="" />
+                  <img src={_} alt="" className="w-full h-full object-cover" />
                 </div>
               </div>
             ))}
           </div>
+          <button
+            type="button"
+            className="swiper-button-prev !w-12 !h-12 !bg-white !rounded-full !shadow-lg !text-primary hover:!bg-primary hover:!text-white transition-all duration-300 !flex !items-center !justify-center !z-50 !left-4"
+          >
+            <IoIosArrowBack className="!w-6 !h-6" />
+          </button>
+          <button
+            type="button"
+            className="swiper-button-next !w-12 !h-12 !bg-white !rounded-full !shadow-lg !text-primary hover:!bg-primary hover:!text-white transition-all duration-300 !flex !items-center !justify-center !z-50 !right-4"
+          >
+            <IoIosArrowForward className="!w-6 !h-6" />
+          </button>
         </div>
       </div>
     </div>

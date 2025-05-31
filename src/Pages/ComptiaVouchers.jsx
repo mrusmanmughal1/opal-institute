@@ -1,5 +1,6 @@
 import React from "react";
 import voc from "../assets/voc.svg";
+import { NavLink } from "react-router-dom";
 const ComptiaVouchers = () => {
   const vouchers = [
     {
@@ -91,9 +92,12 @@ const ComptiaVouchers = () => {
                   <p className="text-red-500 inter my-2 font-semibold">
                     {val.price}.90
                   </p>
-                  <button className="bg-[#F1F1F3] py-2 px-10 rounded-md font-semibold">
+                  <NavLink
+                    to="/"
+                    className="bg-[#F1F1F3] text-center py-2 px-10 rounded-md font-semibold"
+                  >
                     Order Now
-                  </button>
+                  </NavLink>
                 </div>
               );
             })}

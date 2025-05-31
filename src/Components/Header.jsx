@@ -37,12 +37,12 @@ const Header = () => {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="p-4 px-5" to="/book-exam">
+                  <NavLink className="p-4 px-5" to="/buy-pte-voucher">
                     Book PTE Exam
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="p-4 px-5" to="/buy-voucher">
+                  <NavLink className="p-4 px-5" to="/buy-it-vouchers">
                     Buy IT Vouchers
                   </NavLink>
                 </li>
@@ -66,23 +66,24 @@ const Header = () => {
                       >
                         About Us
                       </NavLink>
+
+                      <NavLink
+                        to="/results"
+                        className="block px-4 py-2 hover:bg-gray-100"
+                      >
+                        Our Results
+                      </NavLink>
                       <NavLink
                         to="/contact"
                         className="block px-4 py-2 hover:bg-gray-100"
                       >
-                        Contact
+                        Contact Us
                       </NavLink>
                       <NavLink
-                        to="/faq"
+                        to="/testing-services"
                         className="block px-4 py-2 hover:bg-gray-100"
                       >
-                        FAQ
-                      </NavLink>
-                      <NavLink
-                        to="/blog"
-                        className="block px-4 py-2 hover:bg-gray-100"
-                      >
-                        Blog
+                        Testing Services
                       </NavLink>
                     </div>
                   )}
@@ -91,9 +92,12 @@ const Header = () => {
             </nav>
           </div>
           <div className="">
-            <button className="bg-primary text-white px-8 py-3 rounded-md">
+            <NavLink
+              to="/buy-pte-voucher"
+              className="bg-primary block text-white px-8 py-3 rounded-md"
+            >
               Book Now
-            </button>
+            </NavLink>
           </div>
         </div>
       </div>
@@ -120,7 +124,7 @@ const Header = () => {
                   <NavLink to="/">Home</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/book-exam">Book PTE Exam</NavLink>
+                  <NavLink to="/buy-pte-voucher">Book PTE Exam</NavLink>
                 </li>
                 <li>
                   <NavLink to="/buy-voucher">Buy IT Vouchers</NavLink>

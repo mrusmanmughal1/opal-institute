@@ -20,11 +20,19 @@ import ContactForm from "../Components/ContactForm";
 import Sliders from "../Components/Slider";
 import Hero from "../Components/Hero";
 import MediaGallery from "../Components/MediaGallery";
+import { NavLink } from "react-router-dom";
 
 const Home = () => {
   const OPTIONS = { loop: true };
   const SLIDE_COUNT = 5;
   const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+
+  const phoneNumber = "+923258603436";
+  const message = "Hello!";
+
+  const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+    message
+  )}`;
   return (
     <>
       <Hero />
@@ -63,14 +71,18 @@ const Home = () => {
             <span className="h-2 w-2 bg-white rounded-full"></span>
             <span>Explore Exam Prep Materials</span>
           </p>
-          <button className="bg-white rounded-md text-primary px-8 py-3 font-semibold">
+          <br />
+          <NavLink
+            to="/buy-pte-voucher"
+            className="bg-white rounded-md text-primary px-8 py-3 font-semibold"
+          >
             Book Your Exam
-          </button>
+          </NavLink>
         </div>
       </div>
-      <div className="w-[90%] md:w-[80%] mx-auto">
+      <section id="mocktest" className="w-[90%] md:w-[80%] mx-auto">
         <div className="">
-          <p className="text-2xl md:text-5xl text-center inter my-20 font-semibold">
+          <p className="text-2xl md:text-5xl text-center inter mt-20 font-semibold">
             Take your preparation a step further
           </p>
         </div>
@@ -90,9 +102,13 @@ const Home = () => {
                 exam on the announced dates each month. Book your spot now with
                 us to take your PTE Exam preparation to a step further.
               </p>
-              <button className="px-8 py-3 bg-primary rounded-3xl text-white">
+              <br />
+              <a
+                href={whatsappLink}
+                className="px-8 py-3 bg-primary   rounded-3xl text-white"
+              >
                 Reserve your Spot Now
-              </button>
+              </a>
             </div>
           </div>
           <div className="w-full flex justify-center md:justify-end">
@@ -112,25 +128,30 @@ const Home = () => {
           <div className="w-full space-y-6">
             <div className="text-2xl md:text-4xl font-semibold">
               <p className="plus-jakarta">
-                Give <span className="text-primary">Practice Tests</span> in
-                Real Exam Like Environment
+                Get
+                <span className="text-primary px-1">
+                  Pearson Scored Practice Mock Tests
+                </span>
+                From Us to Step Up Your Prep
               </p>
             </div>
             <div className=" space-y-6">
               <p className="plus-jakarta">
-                At Opal Institute, we offer real exam environment to our
-                students to practice PTE Tests to gain confidence and be fully
-                prepared for their big exam. We have very limited spots and take
-                exam on the announced dates each month. Book your spot now with
-                us to take your PTE Exam preparation to a step further.
+                At Opal Institute, we offer practice mock tests as well as pte
+                and apeuni portals access to our students so they can prepare
+                for their big day and be a step ahead in their exam preparation.
               </p>
-              <button className="px-8 py-3 bg-primary rounded-3xl text-white">
+              <br />
+              <a
+                href={whatsappLink}
+                className="px-8 py-3 bg-primary rounded-3xl text-white"
+              >
                 Reserve your Spot Now
-              </button>
+              </a>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <div className=" ">
         <div className=" relative">
@@ -143,12 +164,18 @@ const Home = () => {
                 Opal Institute is a Pearson VUE Authorised Testing Center
               </p>
               <div className="flex gap-4">
-                <button className="bg-white text-black px-8 py-3 rounded-md">
+                <NavLink
+                  to="/buy-pte-voucher"
+                  className="bg-white text-black px-8 py-3 rounded-md"
+                >
                   Book Exams
-                </button>
-                <button className="flex items-center gap-2 text-white">
+                </NavLink>
+                <NavLink
+                  to="/buy-it-vouchers"
+                  className="flex items-center gap-2 text-white"
+                >
                   Buy Vouchers <MdOutlineArrowRightAlt />
-                </button>
+                </NavLink>
               </div>
             </div>
             <div className="md:w-[40%]   pt-0">
@@ -161,7 +188,7 @@ const Home = () => {
             </div>
           </div>
           <div className="w-[90%] md:w-[80%] bg-white relative  md:absolute   rounded-md  md:left-[10%]   mt-10   bottom-6 grid grid-cols-3  md:grid-cols-5  gap-4 shadow-md mx-auto">
-            {[p1, p2, p3, p4, p5].map((val, i) => (
+            {[p1, p4, p2, p3, p5].map((val, i) => (
               <div className="">
                 <img src={val} alt="" />
               </div>
@@ -180,8 +207,8 @@ const Home = () => {
             <div className="w-full space-y-6">
               <div className=" text-2xl md:text-4xl font-semibold">
                 <p className="plus-jakarta">
-                  Buy <span className="text-primary">IT EXAM VOUCHERS</span>
-                  From Us Give
+                  Buy <span className="text-primary">IT EXAM VOUCHERS</span>{" "}
+                  &nbsp; From Us Give
                 </p>
               </div>
               <div className=" space-y-6">
@@ -190,9 +217,13 @@ const Home = () => {
                   Number of Different Vendors at Discounted Prices. Order your
                   required Exam Voucher Now.
                 </p>
-                <button className="px-8 py-3 bg-primary rounded-3xl text-white">
+                <br />
+                <NavLink
+                  to="/buy-it-vouchers"
+                  className="px-8 py-3 bg-primary rounded-3xl text-white"
+                >
                   Buy IT Vouchers
-                </button>
+                </NavLink>
               </div>
             </div>
             <div className="w-full">
@@ -234,9 +265,12 @@ const Home = () => {
                 operations and work globally in multiple countries.
               </p>
               <div className="">
-                <button className="bg-primary text-white  px-8 py-3 rounded-md">
+                <NavLink
+                  to="/about"
+                  className="bg-primary text-white  px-8 py-3 rounded-md"
+                >
                   Explore more
-                </button>
+                </NavLink>
               </div>
             </div>
           </div>

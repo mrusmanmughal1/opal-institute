@@ -2,7 +2,7 @@
 import React from "react";
 
 const WhatsAppFloatButton = ({
-  phoneNumber = "++923258603436",
+  phoneNumber = "+923258603436",
   message = "Hello!",
 }) => {
   const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(

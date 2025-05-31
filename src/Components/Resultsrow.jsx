@@ -2,6 +2,7 @@ import React from "react";
 import logo2 from "../assets/logo-2.png";
 import el from "../assets/images/elements.png";
 import one from "../assets/images/result/1.png";
+import { NavLink } from "react-router-dom";
 const Resultsrow = () => {
   return (
     <div>
@@ -27,7 +28,7 @@ const Resultsrow = () => {
                 <div className="">
                   <div className=" space-y-2">
                     <div className="w-16 h-16 rounded-full border-2 relative border-black">
-                      <p className="text-xl font-bold absolute top-1/3 left-1/3">
+                      <p className="text-xl font-bold absolute top-1/3 left-[30%]">
                         87
                       </p>
                     </div>
@@ -36,32 +37,33 @@ const Resultsrow = () => {
                 </div>
                 <div className="">
                   <div className=" space-y-2">
-                    <div className="w-16 h-16 rounded-full border-2 relative border-yellow-500">
-                      <p className="text-xl font-bold absolute top-1/3 left-1/3">
+                    <div className="w-16 h-16 rounded-full border-2 relative border-black">
+                      <p className="text-xl font-bold absolute top-1/3 left-[30%]">
                         87
                       </p>
                     </div>
                     <p className="text-center">Listening</p>
                   </div>
                 </div>
+
                 <div className="">
                   <div className=" space-y-2">
                     <div className="w-16 h-16 rounded-full border-2 relative border-green-500">
-                      <p className="text-xl font-bold absolute top-1/3 left-1/3">
+                      <p className="text-xl font-bold absolute top-1/3 left-[30%]">
                         87
                       </p>
                     </div>
-                    <p className="text-center">Listening</p>
+                    <p className="text-center">Reading</p>
                   </div>
                 </div>
                 <div className="">
                   <div className=" space-y-2">
                     <div className="w-16 h-16 rounded-full border-2 relative border-pink-700">
-                      <p className="text-xl font-bold absolute top-1/3 left-1/3">
+                      <p className="text-xl font-bold absolute top-1/3 left-[30%]">
                         87
                       </p>
                     </div>
-                    <p className="text-center">Listening</p>
+                    <p className="text-center">Speaking</p>
                   </div>
                 </div>
               </div>
@@ -71,9 +73,12 @@ const Resultsrow = () => {
             <div className="flex items-center  gap-2">
               <img src={one} alt="" width={50} height={10} /> <span>Name</span>
             </div>
-            <button className="bg-gray-100 px-6 py-2 rounded-md text-xs">
+            <NavLink
+              to="/results"
+              className="bg-gray-100 px-6 py-2 rounded-md text-xs"
+            >
               Read Full Story{" "}
-            </button>
+            </NavLink>
           </div>
         </div>
         <div className="border  bg-white  rounded-md">
@@ -86,7 +91,7 @@ const Resultsrow = () => {
                 <div className="">
                   <div className=" space-y-2">
                     <div className="w-16 h-16 rounded-full border-2 relative border-black">
-                      <p className="text-xl font-bold absolute top-1/3 left-1/3">
+                      <p className="text-xl font-bold absolute top-1/3 left-[30%]">
                         87
                       </p>
                     </div>
@@ -96,7 +101,7 @@ const Resultsrow = () => {
                 <div className="">
                   <div className=" space-y-2">
                     <div className="w-16 h-16 rounded-full border-2 relative border-yellow-500">
-                      <p className="text-xl font-bold absolute top-1/3 left-1/3">
+                      <p className="text-xl font-bold absolute top-1/3 left-[30%]">
                         87
                       </p>
                     </div>
@@ -106,7 +111,7 @@ const Resultsrow = () => {
                 <div className="">
                   <div className=" space-y-2">
                     <div className="w-16 h-16 rounded-full border-2 relative border-green-500">
-                      <p className="text-xl font-bold absolute top-1/3 left-1/3">
+                      <p className="text-xl font-bold absolute top-1/3 left-[30%]">
                         87
                       </p>
                     </div>
@@ -116,7 +121,7 @@ const Resultsrow = () => {
                 <div className="">
                   <div className=" space-y-2">
                     <div className="w-16 h-16 rounded-full border-2 relative border-pink-700">
-                      <p className="text-xl font-bold absolute top-1/3 left-1/3">
+                      <p className="text-xl font-bold absolute top-1/3 left-[30%]">
                         87
                       </p>
                     </div>
@@ -130,9 +135,12 @@ const Resultsrow = () => {
             <div className="flex items-center  gap-2">
               <img src={one} alt="" width={50} height={10} /> <span>Name</span>
             </div>
-            <button className="bg-gray-100 px-6 py-2 rounded-md text-xs">
+            <NavLink
+              to="/results"
+              className="bg-gray-100 px-6 py-2 rounded-md text-xs"
+            >
               Read Full Story{" "}
-            </button>
+            </NavLink>
           </div>
         </div>
       </div>

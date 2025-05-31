@@ -5,10 +5,16 @@ import pic from "../assets/ff.png";
 import one from "../assets/images/buypte/1.png";
 import ape from "../assets/images/buypte/ape.png";
 import alfa from "../assets/images/buypte/alfa.png";
-import smt from "../assets/images/buypte/alfa.png";
+import smt from "../assets/images/buypte/smt.png";
+import ape1 from "../assets/images/buypte/ape1.png";
 
 import valid from "../assets/images/buypte/valid.png";
+import tees from "../assets/images/buypte/60.png";
+import novy from "../assets/images/buypte/90.png";
+
 import ptevoucher from "../assets/images/buypte/ptevoucher.png";
+import { NavLink } from "react-router-dom";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 const ButPtevoucher = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,9 +33,12 @@ const ButPtevoucher = () => {
           <p className="text-4xl font-semibold">PTE + Alfa PTE</p>
           <p className="text-xs">Order Now & Save Big</p>
           <p className="my-6 text-3xl">Rs. 67,600/-</p>
-          <button className="bg-primary  rounded-full px-4 py-3 text-white border-shadowborder border-4">
+          <NavLink
+            to="/checkout-PTE"
+            className="bg-primary  rounded-full px-4 py-3 text-white border-shadowborder border-4"
+          >
             Order Now
-          </button>
+          </NavLink>
           <p className="li my-10">Save Rs. 17,300/-</p>
           <div className="py-8 border-t border-[#D1D1F7]">
             <p>Key Features</p>
@@ -59,9 +68,12 @@ const ButPtevoucher = () => {
           <p className="text-4xl font-semibold">PTE + SPMT</p>
           <p className="text-xs">Order Now & Save Big</p>
           <p className="my-6 text-3xl">Rs. 68,900/-</p>
-          <button className="bg-primary  rounded-full px-4 py-3 text-white border-shadowborder border-4">
+          <NavLink
+            to="/checkout-PTE"
+            className="bg-primary  rounded-full px-4 py-3 text-white border-shadowborder border-4"
+          >
             Order Now
-          </button>
+          </NavLink>
           <p className="li my-10">Save Rs. 14,100/-</p>
           <div className="py-8 border-t border-[#D1D1F7]">
             <p>Key Features</p>
@@ -84,16 +96,19 @@ const ButPtevoucher = () => {
           </div>
           <div className="flex gap-2">
             <img src={pic} alt="" />
-            <img src={pic} alt="" />
+            <img src={smt} alt="" />
           </div>
         </div>
         <div className="bg-[#EFF2FF] right-3 relative rounded-3xl p-10">
-          <p className="text-4xl font-semibold">PTE + Alfa PTE</p>
+          <p className="text-4xl font-semibold">PTE + APEUni</p>
           <p className="text-xs">Order Now & Save Big</p>
           <p className="my-6 text-3xl">Rs. 68,500/-</p>
-          <button className="bg-primary  rounded-full px-4 py-3 text-white border-shadowborder border-4">
+          <NavLink
+            to="/checkout-PTE"
+            className="bg-primary  rounded-full px-4 py-3 text-white border-shadowborder border-4"
+          >
             Order Now
-          </button>
+          </NavLink>
           <p className="li my-10">Save Rs. 15,300/-</p>
           <div className="py-8 border-t border-[#D1D1F7]">
             <p>Key Features</p>
@@ -124,7 +139,7 @@ const ButPtevoucher = () => {
           </div>
           <div className="flex gap-2">
             <img src={pic} alt="" />
-            <img src={pic} alt="" />
+            <img src={ape1} alt="" />
           </div>
         </div>
       </div>
@@ -133,9 +148,12 @@ const ButPtevoucher = () => {
           <p className="text-4xl font-semibold">PTE + SPMT + Alfa PTE</p>
           <p className="text-xs">Order Now & Save Big</p>
           <p className="my-6 text-3xl">Rs. 69,600/-</p>
-          <button className="bg-primary  rounded-full px-4 py-3 text-white border-shadowborder border-4">
+          <NavLink
+            to="/checkout-PTE"
+            className="bg-primary  rounded-full px-4 py-3 text-white border-shadowborder border-4"
+          >
             Order Now
-          </button>
+          </NavLink>
           <p className="li my-10">Save Rs. 17,300/-</p>
           <div className="py-8 border-t border-[#D1D1F7]">
             <p>Key Features</p>
@@ -165,15 +183,19 @@ const ButPtevoucher = () => {
           <div className="flex gap-2">
             <img src={pic} alt="" />
             <img src={alfa} alt="" />
+            <img src={smt} alt="" />
           </div>
         </div>
         <div className="bg-[#EFF2FF] right-3 relative rounded-3xl p-10">
           <p className="text-4xl font-semibold">PTE + SPMT + APEUni</p>
           <p className="text-xs">Order Now & Save Big</p>
           <p className="my-6 text-3xl">Rs. 72,800/-</p>
-          <button className="bg-primary  rounded-full px-4 py-3 text-white border-shadowborder border-4">
+          <NavLink
+            to="/checkout-PTE"
+            className="bg-primary  rounded-full px-4 py-3 text-white border-shadowborder border-4"
+          >
             Order Now
-          </button>
+          </NavLink>
           <p className="li my-10">Save Rs. 17,300/-</p>
           <div className="py-8 border-t border-[#D1D1F7]">
             <p>Key Features</p>
@@ -202,7 +224,8 @@ const ButPtevoucher = () => {
           </div>
           <div className="flex gap-2">
             <img src={pic} alt="" />
-            <img src={pic} alt="" />
+            <img src={smt} alt="" />
+            <img src={ape1} alt="" />
           </div>
         </div>
       </div>
@@ -223,35 +246,36 @@ const ButPtevoucher = () => {
             <div className="">
               <div className="border-b rounded-md   mb-2 overflow-hidden">
                 <div
-                  className="flex justify-between items-center px-4 py-3 cursor-pointer    "
+                  className="flex justify-between items-center  py-3 cursor-pointer    "
                   onClick={() => setIsOpen(!isOpen)}
                 >
-                  <span className="font-medium">Practice Mock Test A</span>
-
-                  {isOpen ? (
-                    <span className="rounded-full p-2 text-xs border">
-                      <FaMinus />
-                    </span>
-                  ) : (
-                    <span className="rounded-full p-2 text-xs border">
-                      <FaPlus />
-                    </span>
-                  )}
+                  <select name="" id="" className="w-full">
+                    <option value="" disabled>
+                      Choose your scored practice mock test
+                    </option>
+                    <option value="">practice mock test A</option>
+                    <option value=""> practice mock test B</option>
+                    <option value=""> practice mock test c</option>
+                    <option value=""> practice mock test D</option>
+                    <option value=""> practice mock test E</option>
+                  </select>
                 </div>
-
-                {isOpen && (
-                  <div className="px-4 py-3 bg-white text-sm text-gray-700  ">
-                    Using past test content and official scoring algorithms,
-                    pearson scored practice mock tests give you an indication of
-                    how you will perform on test day, helping you to feel calm
-                    and confident.
-                  </div>
-                )}
               </div>
             </div>
-            <button className="bg-primary px-4 py-2 rounded-md mt-5 w-full text-white font-semibold">
-              Buy Now
-            </button>
+            <div className="text-xs text-gray-600 py-2">
+              Using past test content and official scoring algorithms, pearson
+              scored practice mock tests give you an indication of how you will
+              perform on test day, helping you to feel calm and confident.
+            </div>
+            <br />
+            <div className="">
+              <NavLink
+                to="/checkout-PTE"
+                className="bg-primary   w-full block text-center  rounded-md  px-4 py-2 text-white border-shadowborder border-4"
+              >
+                Buy Now
+              </NavLink>
+            </div>
           </div>
 
           <div className="w-full">
@@ -270,12 +294,14 @@ const ButPtevoucher = () => {
             </p>
             <p className="text-2xl font-semibold">Rs. 67,000/-</p>
             <div className="">
-              <button
+              <br />
+              <NavLink
+                to="/"
                 className="text-white font-semibold bg bg-primary px-16 py-3 rounded-full
               "
               >
                 Buy Now
-              </button>
+              </NavLink>
             </div>
           </div>
           <div className="w-full">
@@ -308,14 +334,14 @@ const ButPtevoucher = () => {
                 <button className="bg-gray-100 w-full p-2">Buy Now</button>
               </div>
               <div className="relative border p-4">
-                <img src={valid} className=" absolute -left-4 -top-8 " alt="" />
+                <img src={tees} className=" absolute -left-4 -top-8 " alt="" />
                 <img src={ptevoucher} alt="" className="w-96" />
                 <div className="space-y-2 mb-2">
                   <p className="text-xs text-gray-500 p-2">
                     practice exam beforehand
                   </p>
                   <p className="text-primary font-semibold">
-                    Alfa PTE Portal Access 30 Days
+                    Alfa PTE Portal Access 60 Days
                   </p>
                   <p className="text-xs">
                     Unlock your potential with AlfaPTE, the leading practice
@@ -325,14 +351,14 @@ const ButPtevoucher = () => {
                 <button className="bg-gray-100 w-full p-2">Buy Now</button>
               </div>
               <div className="relative border p-4">
-                <img src={valid} className=" absolute -left-4 -top-8 " alt="" />
+                <img src={novy} className=" absolute -left-4 -top-8 " alt="" />
                 <img src={ptevoucher} alt="" className="w-96" />
                 <div className="space-y-2 mb-2">
                   <p className="text-xs text-gray-500 p-2">
                     practice exam beforehand
                   </p>
                   <p className="text-primary font-semibold">
-                    Alfa PTE Portal Access 30 Days
+                    Alfa PTE Portal Access 90 Days
                   </p>
                   <p className="text-xs">
                     Unlock your potential with AlfaPTE, the leading practice
@@ -354,70 +380,54 @@ const ButPtevoucher = () => {
           </p>
           <div className="my-4">
             <div className="grid  w-[80%] mx-auto gap-20 md:grid-cols-2">
-              <div className="relative">
+              <div className="relative border p-4">
                 <img src={valid} className=" absolute -left-4 -top-8 " alt="" />
                 <img src={ape} alt="" className="w-96" />
                 <div className="space-y-2 mb-2">
-                  <p className="text-xs text-gray-500">
+                  <p className="text-xs text-gray-500 p-2 ">
                     practice exam beforehand
                   </p>
                   <p className="text-primary font-semibold">
                     Alfa PTE Portal Access 30 Days
                   </p>
                   <p className="text-xs">
-                    Unlock your potential with AlfaPTE, the leading practice
-                    platform for PTE Academic / UKVI, and PTE Core preparation.
+                    You’ll receive a link where you can easily redeem your APE
+                    Uni voucher.
                   </p>
                 </div>
                 <button className="bg-gray-100 w-full p-2">Buy Now</button>
               </div>
-              <div className="relative">
-                <img src={valid} className=" absolute -left-4 -top-8 " alt="" />
+
+              <div className="relative border p-4">
+                <img src={tees} className=" absolute -left-4 -top-8 " alt="" />
                 <img src={ape} alt="" className="w-96" />
                 <div className="space-y-2 mb-2">
-                  <p className="text-xs text-gray-500">
+                  <p className="p-2 text-xs text-gray-500">
                     practice exam beforehand
                   </p>
                   <p className="text-primary font-semibold">
-                    Alfa PTE Portal Access 30 Days
+                    Alfa PTE Portal Access 60 Days
                   </p>
                   <p className="text-xs">
-                    Unlock your potential with AlfaPTE, the leading practice
-                    platform for PTE Academic / UKVI, and PTE Core preparation.
+                    You’ll receive a link where you can easily redeem your APE
+                    Uni voucher.
                   </p>
                 </div>
                 <button className="bg-gray-100 w-full p-2">Buy Now</button>
               </div>
-              <div className="relative">
-                <img src={valid} className=" absolute -left-4 -top-8 " alt="" />
+              <div className="relative border p-4">
+                <img src={novy} className=" absolute -left-4 -top-8 " alt="" />
                 <img src={ape} alt="" className="w-96" />
                 <div className="space-y-2 mb-2">
-                  <p className="text-xs text-gray-500">
+                  <p className="text-xs p-2 text-gray-500">
                     practice exam beforehand
                   </p>
                   <p className="text-primary font-semibold">
-                    Alfa PTE Portal Access 30 Days
+                    Alfa PTE Portal Access 90 Days
                   </p>
                   <p className="text-xs">
-                    Unlock your potential with AlfaPTE, the leading practice
-                    platform for PTE Academic / UKVI, and PTE Core preparation.
-                  </p>
-                </div>
-                <button className="bg-gray-100 w-full p-2">Buy Now</button>
-              </div>
-              <div className="relative">
-                <img src={valid} className=" absolute -left-4 -top-8 " alt="" />
-                <img src={ape} alt="" className="w-96" />
-                <div className="space-y-2 mb-2">
-                  <p className="text-xs text-gray-500">
-                    practice exam beforehand
-                  </p>
-                  <p className="text-primary font-semibold">
-                    Alfa PTE Portal Access 30 Days
-                  </p>
-                  <p className="text-xs">
-                    Unlock your potential with AlfaPTE, the leading practice
-                    platform for PTE Academic / UKVI, and PTE Core preparation.
+                    You’ll receive a link where you can easily redeem your APE
+                    Uni voucher.
                   </p>
                 </div>
                 <button className="bg-gray-100 w-full p-2">Buy Now</button>

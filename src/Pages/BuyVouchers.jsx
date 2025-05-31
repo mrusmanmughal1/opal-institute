@@ -16,6 +16,7 @@ import paloalto from "../assets/vouchers/paloalto.svg";
 import price from "../assets/vouchers/price.svg";
 import salesforce from "../assets/vouchers/salesforce.svg";
 import togaf from "../assets/vouchers/togaf.svg";
+import { NavLink } from "react-router-dom";
 
 const BuyVouchers = () => {
   const vouchers = [
@@ -111,9 +112,12 @@ const BuyVouchers = () => {
                 <p className="text-center  my-2 text-lg font-semibold">
                   CompTIA Vouchers
                 </p>
-                <button className="bg-[#F1F1F3] rounded-md py-2 px-10 font-semibold">
+                <NavLink
+                  to="/all-vouchers"
+                  className="bg-[#F1F1F3]  text-center rounded-md py-2 px-10 font-semibold"
+                >
                   View Voucher
-                </button>
+                </NavLink>
               </div>
             );
           })}

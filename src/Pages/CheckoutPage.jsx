@@ -1,29 +1,23 @@
 import React, { useState } from "react";
 import img from "../assets/images/buypte/ptevoucher.png";
 import { FaCheck } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 const CheckoutPage = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
   const faqs = [
     {
-      question: "What is your return policy?",
+      question: "VALIDITY",
       answer:
         "You can return any item within 30 days of purchase for a full refund. The item must be unused and in its original packaging.",
     },
     {
-      question: "Do you offer international shipping?",
-      answer:
-        "Yes, we offer worldwide shipping. Shipping costs and times vary depending on your location.",
+      question: "DELIVERY",
+      answer: "Typically delivers within 3-4 hours via email.",
     },
     {
-      question: "How can I track my order?",
-      answer:
-        "Once your order is shipped, you will receive an email with the tracking number and a link to track your package.",
-    },
-    {
-      question: "Can I change my order after placing it?",
-      answer:
-        "Changes to orders can be made within 24 hours of placing the order. Contact our support team for assistance.",
+      question: "HOW TO USE",
+      answer: "You Will Get an email with details",
     },
   ];
 
@@ -32,7 +26,7 @@ const CheckoutPage = () => {
   };
   return (
     <div className="w-[80%] mx-auto poppins py-16">
-      <p className="text-xs text-gray-500 mb-4">
+      <p className="text-xs text-gray-500 mb-10">
         Home / Buy PTE Voucher/ Checkoout
       </p>
       <div className="flex  gap-10">
@@ -48,11 +42,14 @@ const CheckoutPage = () => {
               Rs. 68,900/-
             </p>
             <div className="">
-              <button className="bg-primary rounded-full text-white w-full p-2">
+              <NavLink
+                to="/checkout-pte-user"
+                className="bg-primary rounded-full block text-center text-white w-full py-3 p-2"
+              >
                 Process to Checkout
-              </button>
+              </NavLink>
               <div className=" my-4 text-sm">
-                <ul>
+                <ul className="space-y-2">
                   <li className="flex items-center gap-2">
                     <FaCheck />
                     <span>PTE Voucher’s Validity only for Pakistan</span>
@@ -63,8 +60,13 @@ const CheckoutPage = () => {
                   </li>
                 </ul>
               </div>
-              <div className="my-10">
-                <div className=" relative  poppins   e mx-auto ">
+              <div className="">
+                <button className=" font-semibold border-4  rounded-full   w-full  p-2">
+                  Details
+                </button>
+              </div>
+              <div className="my-4">
+                <div className=" relative  poppins    mx-auto ">
                   <div className="space-y-4 w-[90%]  mx-auto">
                     {faqs.map((faq, index) => (
                       <div
@@ -75,13 +77,11 @@ const CheckoutPage = () => {
                           className="flex justify-between items-center cursor-pointer"
                           onClick={() => toggleFAQ(index)}
                         >
-                          <h2 className="font-medium text-lg">
-                            {faq.question}
-                          </h2>
-                          {openIndex === index ? "+" : "+"}
+                          <h2 className="font-medium ">{faq.question}</h2>
+                          {openIndex === index ? "-" : "+"}
                         </div>
                         {openIndex === index && (
-                          <p className="mt-3  ">{faq.answer}</p>
+                          <p className="mt-3  text-gray-500 ">{faq.answer}</p>
                         )}
                       </div>
                     ))}
@@ -91,9 +91,6 @@ const CheckoutPage = () => {
                   </div>
                 </div>
               </div>
-              <button className="border-gray-200  border-4 rounded-full   w-full p-2">
-                details
-              </button>
             </div>
           </div>
         </div>

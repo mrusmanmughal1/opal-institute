@@ -1,5 +1,5 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "./Pages/Home";
 import Header from "./Components/Header";
 import TestingServices from "./Pages/TestingServices";
@@ -21,10 +21,22 @@ import CheckoutSelfUs from "./Pages/CheckoutSelfUs";
 import Otp from "./Components/Otp";
 import Successfullpayment from "./Pages/Successfullpayment";
 import WhatsAppFloatButton from "./Components/FloatingWhatsapp";
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
+
 const App = () => {
   return (
     <>
       <div className="flex flex-col min-h-screen">
+        <ScrollToTop />
         <Header />
         <WhatsAppFloatButton />
         <main className="flex-grow">
@@ -33,16 +45,16 @@ const App = () => {
             <Route path="/testing-services" element={<TestingServices />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
-            <Route path="/buy-vouchers" element={<BuyVouchers />} />
-            <Route path="/comptia-vouchers" element={<ComptiaVouchers />} />
+            <Route path="/buy-it-vouchers" element={<BuyVouchers />} />
+            <Route path="/all-vouchers" element={<ComptiaVouchers />} />
             <Route path="/buy-voucher" element={<BuyVoucher />} />
             <Route path="/book-exam" element={<BookExam />} />
             <Route path="/practice-mock-test" element={<PracticeMockTest />} />
             <Route path="/results" element={<Results />} />
             <Route path="/check-out" element={<CheckOut />} />
             <Route path="/buy-pte-voucher" element={<ButPtevoucher />} />
-            <Route path="/checkout-page" element={<CheckoutPage />} />
-            <Route path="/checkout-user" element={<CheckoutSelfUs />} />
+            <Route path="/checkout-PTE" element={<CheckoutPage />} />
+            <Route path="/checkout-pte-user" element={<CheckoutSelfUs />} />
             <Route path="/otp" element={<Otp />} />
             <Route path="/success" element={<Successfullpayment />} />
           </Routes>

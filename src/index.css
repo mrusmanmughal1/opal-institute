@@ -82,6 +82,11 @@ slick-arrow slick-prev {
   display: block !important;
   z-index: 1000;
 }
+.slick-prev,
+.slick-next {
+  top: 40% !important;
+  font-size: 20px;
+}
 
 .slick-prev:before,
 .slick-next:before {

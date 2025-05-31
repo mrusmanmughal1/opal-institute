@@ -12,7 +12,7 @@ const Hero = () => {
     {
       title: "Testing Services",
       des: "Fit your coursework around your existing commitments and obligations.",
-      link: "",
+      link: "/testing-services",
     },
     {
       title: "Buy PTE Vouchers",
@@ -22,12 +22,12 @@ const Hero = () => {
     {
       title: "Practice Mock Tests",
       des: "Learn from industry experts who have hands-on experience in design",
-      link: "",
+      link: "#mocktest",
     },
     {
       title: "IT Vouchers",
       des: "Explore a wide range of design and development courses covering various",
-      link: "",
+      link: "/buy-it-vouchers",
     },
   ];
   return (
@@ -39,7 +39,7 @@ const Hero = () => {
           </div>
           <div className="w-full md:w-[30%] md:pt-20">
             <div
-              className="space-y-10 border p-6 bg-slate-100  py-10 relative md:right-52 md:w-[600px] 
+              className="space-y-14 border p-6 bg-slate-100  py-10 relative md:right-52 md:w-[600px] 
                 bg-white/50 backdrop-blur-sm backdrop-saturate-50 rounded shadow-md"
             >
               <p className="text-2xl md:text-5xl font-semibold leading-snug">
@@ -50,7 +50,7 @@ const Hero = () => {
                 Testing Services
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-3 mt-8 md:m-4 md:mt-14">
+            <div className="grid grid-cols-2 gap-5 mt-8 md:m-4 md:mt-14">
               <div className="flex gap-2 items-start text-sm ">
                 <span className="p-1 text-white rounded-full bg-primary">
                   <IoIosCheckmark />{" "}
@@ -86,10 +86,9 @@ const Hero = () => {
           />
           <div className="flex flex-col md:flex-row py-10 md:py-20 gap-5">
             {data.map((val, i) => {
-              console.log(val);
               return (
                 <NavLink to={val.link}>
-                  <div className="bg-[#F7F7F880] py-8 px-6  shadow-md  rounded-lg">
+                  <div className="bg-[#F7F7F880] py-8 px-6  shadow-md hover:border hover:shadow-lg duration-200  rounded-lg">
                     <p className="text-2xl font-semibold mb-4">{val.title}</p>
                     <p className="text-sm text-[#909090]">{val.des}</p>
                     <div className="flex justify-end">

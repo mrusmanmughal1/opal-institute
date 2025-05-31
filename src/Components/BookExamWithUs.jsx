@@ -9,45 +9,63 @@ const BookExamWithUs = () => {
         </label>
         <input
           type="text"
-          className="p-3 rounded-md"
+          className="p-3 rounded-md border"
           placeholder="Enter Student Name"
         />
       </div>
-      <div className="flex flex-col ">
-        <label htmlFor="" className="font-semibold ">
+      <div className="flex flex-col  my-4">
+        <label htmlFor="" className="font-semibold  mb-2 text-xl ">
           Student Details
         </label>
         <div className="">
           <label htmlFor="" className="font-semibold">
             Do you already have a MyPTE Account?{" "}
           </label>
-          <div className="flex items-center gap-10">
+          <div className="flex items-center my-2 gap-10">
             <div className="">
-              <input type="radio" name="a" id="" /> <span>Yes</span>
+              <input type="radio" name="a" id="yes" />{" "}
+              <label htmlFor="yes">Yes</label>
             </div>
             <div className="">
-              <input type="radio" name="a" id="" /> <span>no</span>
+              <input type="radio" name="a" id="no" />{" "}
+              <label htmlFor="no">No</label>
             </div>
           </div>
         </div>
       </div>
       <div className="flex flex-col gap-4">
-        <input type="text" className="p-3 rounded-md" placeholder="User Name" />
-        <input type="text" className="p-3 rounded-md" placeholder="Password" />
+        <input
+          type="text"
+          className="p-3 border rounded-md"
+          placeholder="User Name"
+        />
+        <input
+          type="text"
+          className="p-3 border  rounded-md"
+          placeholder="Password"
+        />
       </div>
       <div className="flex flex-col gap-3">
         <p className="font-semibold my-4">Address Details</p>
         <input
           type="text"
-          className="p-3 rounded-md"
+          className="p-3 border rounded-md"
           placeholder="Street Address"
         />
-        <input type="text" className="p-3 rounded-md" placeholder="City" />
-        <input type="text" className="p-3 rounded-md" placeholder="Country" />
-        <input type="date" className="p-3 rounded-md" />
         <input
           type="text"
-          className="p-3 rounded-md"
+          className="p-3 border rounded-md"
+          placeholder="City"
+        />
+        <input
+          type="text"
+          className="p-3 border rounded-md"
+          placeholder="Country"
+        />
+        <input type="date" className="p-3 border rounded-md" />
+        <input
+          type="text"
+          className="p-3 border rounded-md"
           placeholder="Bidth Country"
         />
       </div>
@@ -69,7 +87,7 @@ const BookExamWithUs = () => {
         </div>
       </div>
       <div className="">
-        <select name="" id="" className="p-3 rounded-md w-full">
+        <select name="" id="" className="p-3 border rounded-md w-full">
           <option value="" disabled>
             Choose Test Center
           </option>
